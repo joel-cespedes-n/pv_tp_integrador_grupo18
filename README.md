@@ -4,7 +4,7 @@
 - Goyochea Kevin – [@KevinGoyochea](https://github.com/KevinGoyochea)
 - Medina Brisa Lourdes – [@xLouux](https://github.com/xLouux)
 - Sivila Emilce Andrea – [@Emilce1996](https://github.com/Emilce1996)
-- Cespedes Joel - [@joel-cespedes-n](https://github.com/joel-cespedes-n)
+- Cespedes Joel Normando - [@joel-cespedes-n](https://github.com/joel-cespedes-n)
 - Gutierrez Maximiliano - [@](https://github.com/)
 
 ### Descripción del proyecto
