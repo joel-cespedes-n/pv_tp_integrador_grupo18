@@ -116,7 +116,7 @@ const ListaClientes = () => {
             </Box>
 
             {/* Tabla de clientes */}
-            <TableCOntainer component={Paper}>
+            <TableContainer component={Paper}>
                 <Table>
                     {/* Encabezado de la tabla */}
                     <TableHead>
@@ -131,7 +131,7 @@ const ListaClientes = () => {
 
                     {/* Cuerpo de la tabla*/}
                     <TableBody>
-                        {clientesFlitrados.map((cliente) => (
+                        {clientesFiltrados.map((cliente) => (
                             <TableRow key={cliente.id}>
                                 <TableCell>{cliente.id}</TableCell>
                                 <TableCell>{cliente.name.firstname} {cliente.name.lastname}</TableCell>
@@ -142,7 +142,7 @@ const ListaClientes = () => {
                         ))}
                     </TableBody>
                 </Table>
-            </TableCOntainer>
+            </TableContainer>
 
             {/* Mensaje cuando no hay resultados*/}
             {clientesFiltrados.length === 0 && (
