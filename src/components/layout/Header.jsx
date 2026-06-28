@@ -1,4 +1,3 @@
-// src/components/layout/Header.jsx
 import { useContext } from "react";
 import { AdminContext } from "../../context/AdminContext";
 import AppBar from "@mui/material/AppBar";
@@ -35,14 +34,14 @@ const Header = () => {
               <Typography className="user-sector">{admin.sector}</Typography>
             </Box>
             <IconButton onClick={logout} className="logout-btn">
-              <LogoutIcon /> {/* 🔹 Logo de cerrar sesión */}
+              <LogoutIcon /> {/* Logo de cerrar sesión */}
             </IconButton>
           </Box>
         ) : (
           <Box component={Link} to="/login" className="user-card">
             <IconButton className="login-btn">
               <AccountCircleIcon />{" "}
-              {/* 🔹 Logo de perfil para iniciar sesión */}
+              {/* Logo de perfil para iniciar sesión */}
             </IconButton>
             <Typography className="login-text">Iniciar Sesión</Typography>
           </Box>

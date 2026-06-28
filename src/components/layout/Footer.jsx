@@ -1,4 +1,3 @@
-// src/components/layout/Footer.jsx
 import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -23,7 +22,7 @@ const Footer = () => {
         marginTop: "auto",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center", // 🔹 centra horizontalmente
+        alignItems: "center", 
       }}
     >
       {/* Texto principal */}
