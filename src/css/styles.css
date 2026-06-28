@@ -1,6 +1,6 @@
 /* styles.css */
 :root {
-  --violeta-medio: #9b59b6; /* ajusta al tono que quieras */
+  --violeta-medio: #9b59b6;
   --violeta-oscuro: #4a235a;
   --violeta-claro: #d2b4de;
 }
@@ -17,34 +17,34 @@ body,
 
 /* Main centrado */
 main {
-  flex: 1; /* ocupa el espacio disponible */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  align-items: center; /* centra horizontalmente */
-  justify-content: flex-start; /* contenido desde arriba */
+  align-items: center; 
+  justify-content: flex-start; 
   padding: 2rem;
 }
 
 /* Dashboard general */
 .dashboard-container {
   width: 100%;
-  max-width: 1200px; /* 🔹 limita el ancho para que quede centrado */
+  max-width: 1200px; 
   margin: 0 auto;
-  text-align: center; /* centra títulos y textos */
+  text-align: center; 
 }
 
 .dashboard-title {
   font-size: 2.2rem !important;
   font-weight: bold;
   color: var(--violeta-oscuro);
-  margin-bottom: 2rem !important; /* 🔹 más distancia respecto al texto */
+  margin-bottom: 2rem !important; 
 }
 
 .dashboard-text {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--violeta-oscuro);
-  margin-bottom: 1rem; /* 🔹 reemplaza paragraph */
+  margin-bottom: 1rem; 
 }
 
 /* Introductorio */
@@ -59,14 +59,14 @@ main {
 .dashboard-metrics {
   display: flex;
   gap: 1rem;
-  justify-content: center; /* 🔹 centra las cards */
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .dashboard-metric-card {
   flex: 1;
   min-width: 250px;
-  max-width: 300px; /* 🔹 evita que se estiren demasiado */
+  max-width: 300px; 
   text-align: center;
   background-color: #f8f9fa;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -74,13 +74,12 @@ main {
 }
 
 /* Header */
-/* 🔹 AppBar */
 .header-appbar {
   background-color: var(--violeta-medio) !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* 🔹 Layout base */
+/* Layout base */
 .header {
   display: flex;
   justify-content: space-between;
@@ -89,7 +88,7 @@ main {
   padding: 0 2rem;
 }
 
-/* 🔹 Logo */
+/* Logo */
 .header-logo img {
   width: 85px;
   height: 85px;
@@ -99,18 +98,18 @@ main {
   background-color: var(--violeta-medio);
 }
 
-/* 🔹 Título */
+/* Título */
 .header-title {
   flex-grow: 1;
   text-align: center;
-  font-size: 2rem !important; /* 🔹 más grande y forzado */
+  font-size: 2rem !important; 
   font-weight: bold;
   color: var(--violeta-oscuro);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   letter-spacing: 1px;
 }
 
-/* 🔹 Tarjeta usuario/login */
+/* Tarjeta usuario/login */
 .user-card {
   display: flex;
   align-items: center;
@@ -143,40 +142,40 @@ main {
   color: var(--violeta-oscuro);
 }
 
-/* 🔹 Responsive: pantallas pequeñas */
+/* Responsive: pantallas pequeñas */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* Apila logo + título */
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
   .header-title {
-    font-size: 1.4rem; /* más pequeño */
+    font-size: 1.4rem; 
     margin-top: 0.5rem;
-    text-align: center; /* 🔹 a la derecha del logo */
+    text-align: center;
     color: var(--violeta-oscuro);
   }
 
   .user-card {
     margin-top: 1rem;
-    justify-content: center; /* centrado debajo */
+    justify-content: center; 
     background-color: var(--violeta-claro);
   }
   
   .dashboard-title {
-    font-size: 1.6rem !important; /* más pequeño en móviles */
-    margin-bottom: 1.5rem; /* mantiene separación */
-    text-align: center; /* centrado para mejor estética */
+    font-size: 1.6rem !important; 
+    margin-bottom: 1.5rem; 
+    text-align: center; 
   }
 }
 
 /* Footer */
 footer {
-  margin-top: auto; /* empuja al fondo */
+  margin-top: auto; 
   background-color: var(--violeta-oscuro);
   color: white;
-  text-align: center; /* 🔹 centra el texto */
+  text-align: center; 
   padding: 1rem;
 }
 

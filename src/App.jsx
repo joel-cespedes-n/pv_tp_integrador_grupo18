@@ -13,12 +13,12 @@ import Dashboard from "./views/Dashboard";
 import DetalleCliente from "./views/DetalleCliente";
 import Login from "./views/Login";
 
-// 🔹 Importar el Provider del contexto
+// Importar el Provider del contexto
 import { AdminProvider } from "./context/AdminContext";
 
 const App = () => {
   return (
-    // 🔹 Envolver toda la aplicación con AdminProvider
+    // Envolver toda la aplicación con AdminProvider
     <AdminProvider>
       <Router>
         <Header />

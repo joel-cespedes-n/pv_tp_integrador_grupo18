@@ -1,4 +1,3 @@
-// src/components/layout/Nav.jsx
 import { AppBar, Toolbar, Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
@@ -9,8 +8,8 @@ const Nav = () => {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "var(--violeta-medio)", // fondo violeta medio
-        marginTop: "4px", // 🔹 altura del Header para que quede debajo
+        backgroundColor: "var(--violeta-medio)", 
+        marginTop: "4px", 
         boxShadow: "none",
       }}
     >
