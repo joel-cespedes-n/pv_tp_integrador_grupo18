@@ -58,7 +58,7 @@ const DetalleCliente = () => {
     <Container sx={{ mt: 4 }}>
       <Typography
         variant="h4"
-        sx={{ mb: 3, fontWeight: "bold", color: "var(--violeta-oscuro)" }}
+        sx={{ mb: 3, fontWeight: "bold", color: "white" }}
       >
         Ficha Completa del Cliente
       </Typography>
