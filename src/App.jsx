@@ -12,15 +12,18 @@ import {
 import Dashboard from "./views/Dashboard";
 import DetalleCliente from "./views/DetalleCliente";
 import Login from "./views/Login";
+import { AdminProvider, AdminContext } from "./context/AdminContext";
+import { useContext } from "react";
 
 // Importar el Provider del contexto
-import { AdminProvider } from "./context/AdminContext";
+const AppContent = () => {
+ const { admin } = useContext(AdminContext);
 
-const App = () => {
   return (
     // Envolver toda la aplicación con AdminProvider
-    <AdminProvider>
       <Router>
+        {admin ? (
+          <>
         <Header />
         <Nav />
         <main>
@@ -29,11 +32,24 @@ const App = () => {
             <Route path="/inicio" element={<Dashboard />} />
             <Route path="/clientes" element={<ListaClientes />} />
             <Route path="/clientes/:id" element={<DetalleCliente />} />
-            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
         <Footer />
+        </>
+        ) : (
+           <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
+        )}
       </Router>
+      );
+    };
+
+        const App = () => {
+  return (
+    <AdminProvider>
+      <AppContent />
     </AdminProvider>
   );
 };

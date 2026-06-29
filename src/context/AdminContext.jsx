@@ -23,8 +23,10 @@ export const AdminProvider = ({ children }) => {
     };
 
     const logoutAdmin = () => {
-        setAdmin(null);
-    };
+    setAdmin(null);
+  localStorage.removeItem("admin");
+};
+
     return(
         <AdminContext.Provider value={{ admin, loginAdmin, logoutAdmin}}>
             {children}
