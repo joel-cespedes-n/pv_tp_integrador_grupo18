@@ -1,107 +1,42 @@
-import { AdminProvider } from "./context/AdminContext"; 
-import Login from "./views/Login"; 
-import Header from "./components/Header"; 
-import './App.css';
+import "./css/styles.css";
+import Header from "./components/layout/Header";
+import Nav from "./components/layout/Nav";
+import ListaClientes from "./views/ListaClientes";
+import Footer from "./components/layout/Footer";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Dashboard from "./views/Dashboard";
+import DetalleCliente from "./views/DetalleCliente";
+import Login from "./views/Login";
 
-function App() {
+// Importar el Provider del contexto
+import { AdminProvider } from "./context/AdminContext";
+
+const App = () => {
   return (
-    <>
+    // Envolver toda la aplicación con AdminProvider
     <AdminProvider>
-      <Header />
-      <Login />
+      <Router>
+        <Header />
+        <Nav />
+        <main>
+          <Routes>
+            <Route path="/" element={<Navigate to="/inicio" />} />
+            <Route path="/inicio" element={<Dashboard />} />
+            <Route path="/clientes" element={<ListaClientes />} />
+            <Route path="/clientes/:id" element={<DetalleCliente />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
     </AdminProvider>
-      <section id="center">
-        <div className="hero">
+  );
+};
 
-           <h1>Bienvenido al Integrador</h1>
-          <p>Este bloque lo podés usar para mostrar un banner o mensaje inicial.</p>
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-      </section>
+export default App;
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Próximos pasos</h2>
-          <p>Aquí podés agregar contenido propio del integrador.</p>
-          <ul>
-            <li>Configurar rutas con React Router</li>
-            <li>Agregar Header con datos del admin</li>
-            <li>Implementar cierre de sesión</li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Conexiones</h2>
-          <p>Podés usar este bloque para links internos de tu proyecto.</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                Repositorio del integrador
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-               Grupo de trabajo
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
-
-export default App
