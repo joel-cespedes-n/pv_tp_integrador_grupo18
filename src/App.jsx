@@ -1,19 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { AdminProvider } from "./context/AdminContext"; 
+import Login from "./views/Login"; 
+import Header from "./components/Header"; 
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+    <AdminProvider>
+      <Header />
+      <Login />
+    </AdminProvider>
       <section id="center">
         <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+
+           <h1>Bienvenido al Integrador</h1>
+          <p>Este bloque lo podés usar para mostrar un banner o mensaje inicial.</p>
         </div>
         <div>
           <h1>Get started</h1>
@@ -21,13 +22,6 @@ function App() {
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
 
       <div className="ticks"></div>
@@ -37,29 +31,20 @@ function App() {
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#documentation-icon"></use>
           </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
+          <h2>Próximos pasos</h2>
+          <p>Aquí podés agregar contenido propio del integrador.</p>
           <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
+            <li>Configurar rutas con React Router</li>
+            <li>Agregar Header con datos del admin</li>
+            <li>Implementar cierre de sesión</li>
           </ul>
         </div>
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
           </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
+          <h2>Conexiones</h2>
+          <p>Podés usar este bloque para links internos de tu proyecto.</p>
           <ul>
             <li>
               <a href="https://github.com/vitejs/vite" target="_blank">
@@ -94,19 +79,19 @@ function App() {
                 >
                   <use href="/icons.svg#x-icon"></use>
                 </svg>
-                X.com
+                Repositorio del integrador
               </a>
             </li>
             <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
+              <a href="#">
                 <svg
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#bluesky-icon"></use>
+                  <use href="/icons.svg#discord-icon"></use>
                 </svg>
-                Bluesky
+               Grupo de trabajo
               </a>
             </li>
           </ul>
