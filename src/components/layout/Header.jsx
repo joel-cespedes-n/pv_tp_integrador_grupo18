@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 
 const Header = () => {
-  const { admin, logout } = useContext(AdminContext);
+  const { admin, logoutAdmin } = useContext(AdminContext);
 
   return (
     <AppBar position="static" color="transparent" className="header-appbar">
@@ -33,7 +33,7 @@ const Header = () => {
               <Typography className="user-name">{admin.nombre}</Typography>
               <Typography className="user-sector">{admin.sector}</Typography>
             </Box>
-            <IconButton onClick={logout} className="logout-btn">
+            <IconButton onClick={logoutAdmin} className="logout-btn">
               <LogoutIcon /> {/* Logo de cerrar sesión */}
             </IconButton>
           </Box>

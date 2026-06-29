@@ -1,15 +1,18 @@
 import { useState, useContext } from "react";
 import { AdminContext } from "../context/AdminContext";
+import { useNavigate } from "react-router-dom"; 
 
 const Login = () => {
     const { loginAdmin } = useContext(AdminContext);
     const [nombre, setNombre] = useState("");
     const [sector, setSector] = useState("Soporte");
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (nombre && sector) {
         loginAdmin(nombre, sector);
+        navigate("/inicio");  
     } else {
         alert("Completa todos los campos");
     }
